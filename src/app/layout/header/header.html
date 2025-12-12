@@ -1,0 +1,43 @@
+<nav class="navbar topbar px-4 d-flex align-items-center justify-content-between" [class.collapsed]="toggle">
+
+  <!-- IZQUIERDA -->
+  <div class="navbar-brand text-white fw-semibold fs-5">
+    Dashboard
+  </div>
+
+  <!-- DERECHA -->
+  <div class="d-flex align-items-center gap-4">
+
+    <!-- CAMPANA -->
+    <button class="btn btn-transparent p-0 position-relative notif-btn">
+      <i class="bi bi-bell fs-4 text-white"></i>
+      <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle p-1"></span>
+    </button>
+
+    <!-- AVATAR CON DROP -->
+    <div class="dropdown">
+      <button class="btn p-0 border-0 bg-transparent" data-bs-toggle="dropdown">
+        <div class="avatar"></div>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+        <li>
+          <a class="dropdown-item d-flex align-items-center gap-2" routerLink="/perfil">
+            <i class="bi bi-person"></i> Perfil
+          </a>
+        </li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <li>
+          <button class="dropdown-item d-flex align-items-center gap-2" (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+          </button>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+
+</nav>

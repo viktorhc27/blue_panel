@@ -1,0 +1,44 @@
+<div class="row g-3">
+
+  <!-- CARDS -->
+  <div class="col-md-3" *ngFor="let card of cards">
+    <div class="card shadow-sm p-3 stat-card">
+      <h2>{{ card.value }}</h2>
+      <p>{{ card.label }}</p>
+    </div>
+  </div>
+
+  <!-- GRÁFICO -->
+  <div class="col-lg-8">
+    <div class="card p-4">
+      <h5 class="mb-3">Rendimiento mensual</h5>
+      <div class="chart-placeholder"></div>
+    </div>
+  </div>
+
+  <!-- TABLA -->
+  <div class="col-lg-4">
+    <div class="card p-4">
+      <h5 class="mb-3">Usuarios recientes</h5>
+
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let u of usuarios">
+            <td>{{ u.nombre }}</td>
+            <td>{{ u.rol }}</td>
+            <td>{{ u.estado }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

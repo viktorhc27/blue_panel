@@ -1,0 +1,10 @@
+.stat-card {
+  border-radius: 12px;
+  border: 1px solid #E6E6E6;
+}
+
+.chart-placeholder {
+  height: 250px;
+  background: linear-gradient(to top, #e5e7eb, #f9fafb);
+  border-radius: 8px;
+}
