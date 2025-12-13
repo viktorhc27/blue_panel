@@ -1,0 +1,100 @@
+
+  :root {
+    --p1: #9C6ADE;
+    --p2: #20C7DF;
+    --p3: #00BA88;
+  }
+
+  .flat-card {
+    border: 1px solid #e7e7e7;
+    padding: 1.2rem;
+    border-radius: 10px;
+    background: #fafafa;
+  }
+
+  .color-card-primary { background: var(--p1) !important; }
+  .color-card-secondary { background: var(--p2) !important; }
+  .color-card-success { background: var(--p3) !important; }
+
+  /* Stats */
+  .stat-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 4px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: .2s;
+  }
+  .stat-card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Banner */
+  .banner-card {
+    background: linear-gradient(45deg, var(--p1), var(--p2));
+    border-radius: 16px;
+  }
+
+  /* Glass */
+  .glass-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-image: url('https://picsum.photos/800/600?blur=4');
+    background-size: cover;
+    color: white;
+  }
+
+  /* Neumorphism */
+  .neumo-card {
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #bebebe,
+                -8px -8px 16px #ffffff;
+  }
+
+  /* Stats Premium */
+  .stat-premium {
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: .2s;
+  }
+  .stat-premium:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Timeline */
+  .timeline-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 12px;
+  }
+  .timeline .dot {
+    width: 12px;
+    height: 12px;
+    background: var(--p1);
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 5px;
+  }
+
+  /* Icon cards */
+  .icon-big-card {
+    border-radius: 20px;
+    transition: .3s;
+  }
+  .icon-big-card:hover {
+    transform: scale(1.03);
+  }
+  .icon-big-card .icon {
+    font-size: 48px;
+    color: var(--p1);
+  }
+
+  /* Pricing */
+  .pricing-card {
+    border-radius: 16px;
+  }
