@@ -1,100 +1,121 @@
-  <!-- ===================================================== -->
-  <!--                    🔥 HEADER VARIANTS                 -->
-  <!-- ===================================================== -->
 
-  <!-- HEADER 1 - Clásico (como la imagen) -->
-  <div class="page-header d-flex justify-content-between align-items-center mb-4">
+<!-- ===================================================== -->
+<!--              🔥 HEADER VARIANTS EXTRA               -->
+<!-- ===================================================== -->
+
+<!-- HEADER 7 - Con Badge de estado -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">BASIC CARD <span class="badge bg-success ms-2">Activo</span></h3>
+    <small class="text-muted">Módulo principal del sistema</small>
+  </div>
+
+  <nav class="breadcrumb m-0">
+    <a class="breadcrumb-item" href="#"><i class="bi bi-house-fill text-primary"></i></a>
+    <span class="breadcrumb-item">Cards</span>
+    <span class="breadcrumb-item active">Basic</span>
+  </nav>
+</div>
+
+<!-- HEADER 8 - Dashboard con acciones -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h4 class="fw-bold mb-1">BASIC CARD</h4>
+    <span class="text-muted small">Resumen general</span>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-funnel"></i></button>
+    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-plus-circle"></i> Nuevo</button>
+  </div>
+</div>
+
+<!-- HEADER 9 - Con submenú tipo tabs -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center">
     <div>
       <h3 class="fw-bold m-0">BASIC CARD</h3>
-      <small class="text-muted">Universal Admin Panel</small>
+      <small class="text-muted">Gestión de componentes</small>
     </div>
-
-    <nav class="breadcrumb m-0">
-      <a class="breadcrumb-item" href="#"><i class="bi bi-house-door-fill text-primary"></i></a>
-      <span class="breadcrumb-item">Cards</span>
-      <span class="breadcrumb-item active" aria-current="page">Basic Card</span>
-    </nav>
+    <span class="text-muted small"><i class="bi bi-clock"></i> Actualizado hace 2 min</span>
   </div>
 
+  <ul class="nav nav-tabs mt-3">
+    <li class="nav-item"><a class="nav-link active" href="#">General</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Detalles</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Historial</a></li>
+  </ul>
+</div>
 
-  <!-- HEADER 2 - Minimalista -->
-  <div class="d-flex justify-content-between align-items-center mb-4">
+<!-- HEADER 10 - Compacto para móviles -->
+<div class="mb-4 d-flex justify-content-between align-items-center">
+  <div>
+    <h5 class="fw-bold m-0">Basic Card</h5>
+    <small class="text-muted">Admin</small>
+  </div>
+
+  <button class="btn btn-sm btn-outline-primary">
+    <i class="bi bi-arrow-left"></i>
+  </button>
+</div>
+
+<!-- HEADER 11 - Estilo KPI -->
+<div class="p-3 mb-4 rounded shadow-sm bg-light d-flex justify-content-between align-items-center">
+  <div>
+    <h3 class="fw-bold m-0">BASIC CARD</h3>
+    <small class="text-muted">Métricas del módulo</small>
+  </div>
+
+  <div class="text-end">
+    <div class="fw-bold text-success">98%</div>
+    <small class="text-muted">Disponibilidad</small>
+  </div>
+</div>
+
+<!-- HEADER 12 - Con avatar -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div class="d-flex align-items-center gap-3">
+    <img src="https://via.placeholder.com/40" class="rounded-circle" alt="avatar">
     <div>
-      <h4 class="fw-semibold">BASIC CARD</h4>
-      <p class="text-muted small m-0">Panel Administrativo</p>
-    </div>
-
-    <div class="small text-muted">
-      <i class="bi bi-house text-primary"></i> / Cards / <strong>Basic Card</strong>
+      <h4 class="fw-bold m-0">BASIC CARD</h4>
+      <small class="text-muted">Asignado a tu usuario</small>
     </div>
   </div>
 
+  <nav class="breadcrumb m-0">
+    <span class="breadcrumb-item">Inicio</span>
+    <span class="breadcrumb-item active">Cards</span>
+  </nav>
+</div>
 
-  <!-- HEADER 3 - Con Línea Decorativa -->
-  <div class="mb-4 pb-2 border-bottom d-flex justify-content-between align-items-end">
-    <div>
-      <h3 class="fw-bold mb-1">BASIC CARD</h3>
-      <span class="text-muted">Panel Universal</span>
-    </div>
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb m-0">
-        <li class="breadcrumb-item"><i class="bi bi-house-fill text-primary"></i></li>
-        <li class="breadcrumb-item">Cards</li>
-        <li class="breadcrumb-item active" aria-current="page">Basic Card</li>
-      </ol>
-    </nav>
+<!-- HEADER 13 - Oscuro -->
+<div class="p-3 mb-4 rounded bg-dark text-white d-flex justify-content-between align-items-center">
+  <div>
+    <h3 class="fw-bold m-0">BASIC CARD</h3>
+    <small class="text-white-50">Modo oscuro</small>
   </div>
 
-
-  <!-- HEADER 4 - Moderno con Degradado -->
-  <div class="d-flex justify-content-between align-items-center mb-4 p-3 rounded"
-       style="background: linear-gradient(90deg,#9C6ADE22,#20C7DF22);">
-    <div>
-      <h3 class="fw-bold m-0">BASIC CARD</h3>
-      <span class="text-muted small">Admin Panel</span>
-    </div>
-
-    <div class="breadcrumb m-0">
-      <a href="#" class="text-primary"><i class="bi bi-house-fill"></i></a>
-      <span class="mx-1">/</span>
-      <span class="text-dark">Cards</span>
-      <span class="mx-1">/</span>
-      <strong>Basic Card</strong>
-    </div>
+  <div class="text-white-50">
+    <i class="bi bi-house"></i> / Cards / Basic
   </div>
+</div>
 
-
-  <!-- HEADER 5 - Elegante con Icono -->
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <div class="d-flex align-items-center gap-2">
-      <i class="bi bi-grid-fill fs-2 text-primary"></i>
-      <div>
-        <h4 class="fw-bold m-0">BASIC CARD</h4>
-        <small class="text-muted">Panel de Control</small>
-      </div>
-    </div>
-
-    <nav class="breadcrumb m-0">
-      <a class="breadcrumb-item" href="#"><i class="bi bi-house"></i></a>
-      <span class="breadcrumb-item">Cards</span>
-      <span class="breadcrumb-item active">Basic Card</span>
-    </nav>
-  </div>
-
-
-  <!-- HEADER 6 - Full Width con Sombra -->
-  <div class="shadow-sm rounded p-3 mb-4 bg-white d-flex justify-content-between align-items-center">
+<!-- HEADER 14 - Notificación integrada -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center">
     <div>
       <h3 class="fw-bold m-0">BASIC CARD</h3>
-      <span class="text-muted small">Universal Admin Panel</span>
+      <small class="text-muted">Panel administrativo</small>
     </div>
-
-    <ol class="breadcrumb m-0">
-      <li class="breadcrumb-item"><i class="bi bi-house text-primary"></i></li>
-      <li class="breadcrumb-item">Cards</li>
-      <li class="breadcrumb-item active">Basic Card</li>
-    </ol>
+    <span class="badge bg-warning text-dark"><i class="bi bi-bell-fill"></i> 3 pendientes</span>
   </div>
+</div>
 
+<!-- HEADER 15 - Hero Header -->
+<div class="mb-4 p-4 rounded text-white"
+     style="background:linear-gradient(135deg,#0d6efd,#6610f2)">
+  <h2 class="fw-bold">BASIC CARD</h2>
+  <p class="mb-0 text-white-50">Gestión avanzada del panel administrativo</p>
+</div>
 
+https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/default/elements/bc_button.html
