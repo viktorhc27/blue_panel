@@ -1,0 +1,26 @@
+
+.demo-section {
+  padding: 1.25rem;
+  border-radius: 10px;
+  background: #f8f9fa;
+  margin-bottom: 1.5rem;
+}
+
+.demo-section.dark {
+  background: #212529;
+  color: #fff;
+}
+
+.demo-title {
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.demo-divider {
+  height: 1px;
+  background: #e9ecef;
+  margin: 2rem 0;
+}
