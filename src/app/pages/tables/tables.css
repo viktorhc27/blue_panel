@@ -1,0 +1,175 @@
+/* ============================= */
+/* TABLE CARD                    */
+/* ============================= */
+
+.bp-table-card {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+/* ============================= */
+/* TABLE HEADER                  */
+/* ============================= */
+
+.bp-table-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================= */
+/* TABLE BASE                    */
+/* ============================= */
+
+.bp-table {
+  margin-bottom: 0;
+}
+
+.bp-table thead th {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #64748b;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.bp-table td {
+  vertical-align: middle;
+  font-size: .9rem;
+  border-top: 0;
+  padding: 14px 16px;
+}
+
+
+/* ============================= */
+/* HOVER                         */
+/* ============================= */
+
+.bp-table tbody tr {
+  transition: background .2s ease ;
+}
+
+.bp-table tbody tr:hover >* {
+  background: rgba(30, 99, 233, .05) !important;
+}
+
+/* ============================= */
+/* BADGES                        */
+/* ============================= */
+
+.bp-badge-success {
+  background: rgba(34, 197, 94, .15);
+  color: #15803d;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+}
+
+.bp-badge-warning {
+  background: rgba(250, 204, 21, .2);
+  color: #92400e;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+}
+
+/* ============================= */
+/* RESPONSIVE FIX                */
+/* ============================= */
+
+.table-responsive {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* LOADING STATE                 */
+/* ============================= */
+
+.bp-loading-card {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bp-loading-content {
+  text-align: center;
+}
+
+.bp-spinner {
+  width: 3rem;
+  height: 3rem;
+  border-width: 3px;
+}
+
+.bp-loading-text {
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* PAGINATION CARD               */
+/* ============================= */
+
+.bp-pagination-card {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+/* ============================= */
+/* PAGINATION BASE               */
+/* ============================= */
+
+.bp-pagination .page-link {
+  border: 0;
+  border-radius: 10px;
+  margin: 0 4px;
+
+  font-size: .85rem;
+  font-weight: 500;
+
+  color: #475569;
+  background: transparent;
+
+  min-width: 36px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all .2s ease;
+}
+
+.bp-pagination .page-link:hover {
+  background: rgba(30, 99, 233, .1);
+  color: #1e63e9;
+}
+
+/* ============================= */
+/* ACTIVE / DISABLED             */
+/* ============================= */
+
+.bp-pagination .page-item.active .page-link {
+  background: rgba(30, 99, 233, .15);
+  color: #1e63e9;
+}
+
+.bp-pagination .page-item.disabled .page-link {
+  opacity: .4;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* ICONS                         */
+/* ============================= */
+
+.bp-pagination .bi {
+  font-size: 1rem;
+}

@@ -1,6 +1,6 @@
 .sidebar {
   width: 220px;
-  min-height: 100vh;
+  min-height: 200vh;
   background-color: #194FB8;
   transition: width 0.3s ease;
 }
@@ -41,11 +41,12 @@
   transition: transform 0.3s ease, left 0.3s ease;
 }
 
-.sidebar.collapsed + .toggle-circle {
+.sidebar.collapsed+.toggle-circle {
   left: 50px;
   transform: rotate(180deg);
-  
+
 }
+
 .square-btn {
   background: rgba(255, 255, 255, 0.15);
   padding: 12px;
@@ -61,14 +62,14 @@
 .square-btn:hover {
   background: rgba(255, 255, 255, 0.25);
 }
- 
+
 .collapsed-btn {
-  height: 50px; 
+  height: 50px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
- /*  transition: background 0.2s ease; */
+  /*  transition: background 0.2s ease; */
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -76,6 +77,10 @@
 
 .collapsed-btn:hover {
   background: rgba(255, 255, 255, 0.35);
+}
+
+.collapsed-btn.active {
+  background: rgba(255, 255, 255, 0.2) !important;
 }
 
 .submenu {
@@ -94,7 +99,8 @@
 .submenu-item:hover {
   color: white;
 }
- /* Contenedor */
+
+/* Contenedor */
 .tooltip-menu {
   position: relative;
 }
@@ -103,14 +109,15 @@
 .tooltip-panel {
   position: absolute;
   top: 0;
-  left: 60px; /* aparece al lado del sidebar */
+  left: 60px;
+  /* aparece al lado del sidebar */
   background: #194FB8;
   padding: 8px 10px;
   border-radius: 10px;
   display: none;
   flex-direction: column;
   min-width: 140px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   z-index: 999;
 }
 
@@ -129,20 +136,21 @@
   gap: 8px;
   align-items: center;
 }
+
 /* "Puente invisible" para que no se cierre cuando bajas el mouse */
 .tooltip-panel::before {
   content: "";
   position: absolute;
-  left: -20px; /* distancia entre el botón y el tooltip */
+  left: -20px;
+  /* distancia entre el botón y el tooltip */
   top: 0;
-  width: 20px; /* puente para mantener hover */
+  width: 20px;
+  /* puente para mantener hover */
   height: 100%;
 }
 
 .tooltip-item:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-@media (max-width: 768px) {
-  
-}
+@media (max-width: 768px) {}

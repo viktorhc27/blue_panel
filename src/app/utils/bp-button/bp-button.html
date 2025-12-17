@@ -1,0 +1,29 @@
+<button
+  class="btn"
+  [ngClass]="variantClass"
+  [class.btn-icon]="iconBtn"
+  [class.shadow]="shadow"
+  [class.btn-lg]="large"
+  [class.btn-sm]="small"
+  [class.disabled]="disabled || loading"
+  [attr.disabled]="disabled || loading ? true : null"
+  (click)="onAction()"
+>
+
+  @if (loading) {
+    <span class="spinner-border spinner-border-sm me-2"></span>
+  }
+
+  @if (!loading && iconBp) {
+    <i class="bi" [ngClass]="'bi-' + iconBp"></i>
+  }
+
+  @if (!loading && iconFa) {
+    <i class="fa-solid" [ngClass]="'fa-' + iconFa"></i>
+  }
+
+  @if (!loading) {
+    {{ text }}
+  }
+
+</button>

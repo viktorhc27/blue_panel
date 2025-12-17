@@ -1,0 +1,23 @@
+.alert-card {
+  border-radius: 14px;
+  transition: all .25s ease;
+}
+
+.alert-card:hover {
+  transform: translateY(-3px);
+}
+
+.alert-card-icon {
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.bg-light {
+  color: #0f172a !important;
+  border: 1px solid #e5e7eb;
+}

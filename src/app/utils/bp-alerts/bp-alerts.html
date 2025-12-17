@@ -1,0 +1,39 @@
+<div *ngIf="!closed" class="alert" role="alert" [ngClass]="[
+    'alert-' + type,
+    small ? 'alert-sm' : '',
+    border ? 'alert-border ' + type : '',
+    dismissible ? 'alert-dismissible' : '',
+    actionText ? 'alert-action' : ''
+  ]">
+
+    <!-- ICONOS -->
+    @if (iconBp) {
+    <i class="bi me-2" [ngClass]="'bi-' + iconBp"></i>
+    }
+
+    @if (iconFa) {
+    <i class="fa-solid me-2" [ngClass]="'fa-' + iconFa"></i>
+    }
+
+    <!-- CONTENIDO -->
+    <div class="flex-grow-1">
+        @if (title) {
+        <h6 class="alert-heading mb-1">{{ title }}</h6>
+        }
+        <span>{{ text }}</span>
+    </div>
+
+    <!-- BOTÓN ACCIÓN -->
+    @if (actionText) {
+    <button class="btn btn-sm ms-3" [ngClass]="'btn-outline-' + type" (click)="onAction()">
+        {{ actionText }}
+    </button>
+    }
+
+    <!-- CERRAR -->
+    @if (dismissible) {
+    <button type="button" class="btn-close ms-3" (click)="close()">
+    </button>
+    }
+
+</div>

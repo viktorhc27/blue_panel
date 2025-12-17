@@ -1,106 +1,165 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header">
-                    <h5 class="mb-0">Buttons</h5>
-                    <small class="text-muted">Bootstrap button variations</small>
-                </div>
-                <div class="card-body">
-                    <h6 class="mb-3">Default</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-primary">Primary</button>
-                        <button class="btn btn-secondary">Secondary</button>
-                        <button class="btn btn-success">Success</button>
-                        <button class="btn btn-danger">Danger</button>
-                        <button class="btn btn-warning">Warning</button>
-                        <button class="btn btn-info">Info</button>
-                        <button class="btn btn-light">Light</button>
-                        <button class="btn btn-dark">Dark</button>
-                        <button class="btn btn-link">Link</button>
-                    </div>
+<div class="container-fluid py-4">
 
-                    <div class="d-grid mb-4">
-                        <button class="btn btn-primary">Block Level Button</button>
-                    </div>
-                    <h6 class="mb-3">Light Buttons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-soft-primary">Primary</button>
-                        <button class="btn btn-soft-success">Success</button>
-                        <button class="btn btn-soft-danger">Danger</button>
-                    </div>
-                    <h6 class="mb-3">Link Buttons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <a href="#" class="btn btn-primary">Primary link</a>
-                        <a href="#" class="btn btn-primary disabled">Disabled link</a>
-                        <a href="#" class="btn btn-soft-success">Success link</a>
-                    </div>
-                    <h6 class="mb-3">Outline Buttons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-outline-primary">Primary</button>
-                        <button class="btn btn-outline-secondary">Secondary</button>
-                        <button class="btn btn-outline-success">Success</button>
-                        <button class="btn btn-outline-danger">Danger</button>
-                        <button class="btn btn-outline-warning">Warning</button>
-                        <button class="btn btn-outline-info">Info</button>
-                        <button class="btn btn-outline-dark">Dark</button>
-                    </div>
-                    <h6 class="mb-3">Disabled Buttons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-primary disabled">Primary</button>
-                        <button class="btn btn-secondary disabled">Secondary</button>
-                        <button class="btn btn-success disabled">Success</button>
-                        <button class="btn btn-danger disabled">Danger</button>
-                    </div>
-                    <h6 class="mb-3">Shadow Buttons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-primary shadow">Primary</button>
-                        <button class="btn btn-success shadow">Success</button>
-                        <button class="btn btn-danger shadow">Danger</button>
-                    </div>
-                    <h6 class="mb-3">Sizes</h6>
-                    <div class="d-flex align-items-center gap-2 mb-4">
-                        <button class="btn btn-primary btn-lg">Large</button>
-                        <button class="btn btn-primary">Default</button>
-                        <button class="btn btn-primary btn-sm">Small</button>
-                    </div>
-                    <h6 class="mb-3">Buttons with Icons</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <button class="btn btn-primary">
-                            <i class="bi bi-hand-thumbs-up me-1"></i> Like
-                        </button>
-                        <button class="btn btn-success">
-                            <i class="bi bi-check-circle me-1"></i> Success
-                        </button>
-                        <button class="btn btn-danger">
-                            <i class="bi bi-trash me-1"></i> Delete
-                        </button>
-                    </div>
-                    <h6 class="mb-3">Icon Buttons</h6>
-                    <div class="d-flex gap-2 mb-4">
-                        <button class="btn btn-primary btn-icon shadow">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-success btn-icon shadow">
-                            <i class="bi bi-check"></i>
-                        </button>
-                        <button class="btn btn-danger btn-icon shadow">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-                    <h6 class="mb-3">Loading State</h6>
-                    <button class="btn btn-primary btn-loading mb-4">
-                        <span class="spinner-border spinner-border-sm me-2"></span>
-                        Processing
-                    </button>
-                    <h6 class="mb-3">Gradient Buttons</h6>
-                    <div class="d-grid mb-4">
-                        <button class="btn btn-gradient-success ">
-                            <i class="bi bi-lightning-charge me-1"></i> Main Action
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- ========================= -->
+  <!-- TÍTULO GENERAL -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">BP Buttons</h3>
+    <p class="text-muted">
+      Componente reutilizable para acciones del sistema, con variantes visuales y estados.
+    </p>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- 1. BOTONES BÁSICOS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">1. Botones básicos</h5>
+    <p class="text-muted small">
+      Uso estándar para acciones principales.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Primary" type="primary"></app-bp-button>
+      <app-bp-button text="Secondary" type="secondary"></app-bp-button>
+      <app-bp-button text="Success" type="success"></app-bp-button>
+      <app-bp-button text="Warning" type="warning"></app-bp-button>
+      <app-bp-button text="Danger" type="danger"></app-bp-button>
+      <app-bp-button text="Dark" type="dark"></app-bp-button>
+      <app-bp-button text="Light" type="light"></app-bp-button>
     </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 2. BOTONES SOFT -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">2. Botones soft</h5>
+    <p class="text-muted small">
+      Variante visual más suave. Mantiene el mismo color, pero con menor impacto visual.
+      Ideal para acciones secundarias.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Soft Primary" type="primary" [soft]="true"></app-bp-button>
+      <app-bp-button text="Soft Success" type="success" [soft]="true"></app-bp-button>
+      <app-bp-button text="Soft Warning" type="warning" [soft]="true"></app-bp-button>
+      <app-bp-button text="Soft Danger" type="danger" [soft]="true"></app-bp-button>
+      <app-bp-button text="Soft Dark" type="dark" [soft]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 3. BOTONES OUTLINE -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">3. Botones outline</h5>
+    <p class="text-muted small">
+      Botones con borde. Se usan para acciones neutras o menos prioritarias.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Outline Primary" type="primary" [outline]="true"></app-bp-button>
+      <app-bp-button text="Outline Success" type="success" [outline]="true"></app-bp-button>
+      <app-bp-button text="Outline Warning" type="warning" [outline]="true"></app-bp-button>
+      <app-bp-button text="Outline Danger" type="danger" [outline]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 4. BOTONES CON GRADIENTE -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">4. Botones gradient</h5>
+    <p class="text-muted small">
+      Variante destacada para llamadas a la acción (CTA).
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Primary CTA" type="primary" [gradient]="true"></app-bp-button>
+      <app-bp-button text="Success CTA" type="success" [gradient]="true"></app-bp-button>
+      <app-bp-button text="Danger CTA" type="danger" [gradient]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 5. BOTONES CON ICONO -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">5. Botones con icono</h5>
+    <p class="text-muted small">
+      Se utilizan para reforzar visualmente la acción.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Guardar" type="success" iconBp="check-circle-fill"></app-bp-button>
+      <app-bp-button text="Eliminar" type="danger" iconBp="trash-fill"></app-bp-button>
+      <app-bp-button text="Editar" type="primary" iconBp="pencil-fill"></app-bp-button>
+      <app-bp-button text="Configurar" type="secondary" iconBp="gear-fill"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 6. BOTONES SOLO ICONO -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">6. Botones solo icono</h5>
+    <p class="text-muted small">
+      Ideales para acciones rápidas en tablas o toolbars.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button type="primary" iconBp="plus" [iconBtn]="true"></app-bp-button>
+      <app-bp-button type="success" iconBp="check" [iconBtn]="true"></app-bp-button>
+      <app-bp-button type="danger" iconBp="trash" [iconBtn]="true"></app-bp-button>
+      <app-bp-button type="warning" iconBp="exclamation" [iconBtn]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 7. TAMAÑOS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">7. Tamaños</h5>
+    <p class="text-muted small">
+      Variantes de tamaño para distintos contextos.
+    </p>
+
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <app-bp-button text="Small" type="primary" [small]="true"></app-bp-button>
+      <app-bp-button text="Default" type="primary"></app-bp-button>
+      <app-bp-button text="Large" type="primary" [large]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 8. ESTADOS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">8. Estados</h5>
+    <p class="text-muted small">
+      Estados especiales del botón.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-bp-button text="Con sombra" type="primary" [shadow]="true"></app-bp-button>
+      <app-bp-button text="Deshabilitado" type="secondary" [disabled]="true"></app-bp-button>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 9. GUÍA RÁPIDA -->
+  <!-- ================================================= -->
+  <section class="border-top pt-4 mt-5">
+    <h5 class="fw-bold mb-3">Guía rápida</h5>
+
+    <ul class="small text-muted">
+      <li><strong>Básico:</strong> acción principal</li>
+      <li><strong>Soft:</strong> acción secundaria</li>
+      <li><strong>Outline:</strong> acción neutra</li>
+      <li><strong>Gradient:</strong> llamada a la acción</li>
+      <li><strong>Icon:</strong> acciones rápidas</li>
+    </ul>
+  </section>
+
 </div>

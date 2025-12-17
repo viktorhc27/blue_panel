@@ -1,197 +1,236 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="card shadow-sm mb-4">
-        <div class="card-header">
-          <h5 class="mb-0">Cards</h5>
-          <small class="text-muted">Card variations</small>
+<div class="container-fluid py-4">
+
+  <!-- ========================= -->
+  <!-- PAGE TITLE -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">BP Cards</h3>
+    <p class="text-muted mb-0">
+      Componentes reutilizables para dashboards, métricas y contenido.
+    </p>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- 1. BASIC CARDS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">1. Basic Cards</h5>
+    <p class="text-muted small">
+      Estructura estándar con header, body y footer.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-header">Basic</div>
+          <div class="card-body">
+            <h6 class="card-title">Default</h6>
+            <p class="text-muted mb-0">
+              Card simple y reutilizable.
+            </p>
+          </div>
+          <div class="card-footer">Footer</div>
         </div>
-        <div class="card-body">
-          <h6 class="mb-3">Basic Cards</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h6 class="card-title">Basic Card</h6>
-                  <p class="card-text text-muted">Simple card with body content.</p>
-                </div>
-              </div>
-            </div>
+      </div>
 
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h6 class="card-title">Shadow Card</h6>
-                  <p class="card-text text-muted">Card with subtle shadow.</p>
-                </div>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header">Shadow</div>
+          <div class="card-body">
+            <h6 class="card-title">Shadow Card</h6>
+            <p class="text-muted mb-0">
+              Sombra suave para profundidad.
+            </p>
+          </div>
+          <div class="card-footer">Footer</div>
+        </div>
+      </div>
 
-            <div class="col-md-4">
-              <div class="card border-0 shadow">
-                <div class="card-body">
-                  <h6 class="card-title">Borderless</h6>
-                  <p class="card-text text-muted">Clean & modern look.</p>
-                </div>
-              </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-header">Minimal</div>
+          <div class="card-body">
+            <h6 class="card-title">Borderless</h6>
+            <p class="text-muted mb-0">
+              Estilo limpio y moderno.
+            </p>
+          </div>
+          <div class="card-footer">Footer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 2. COLORED HEADER -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">2. Colored Header</h5>
+    <p class="text-muted small">
+      Cards con encabezado por estado.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-header bg-primary text-white">Primary</div>
+          <div class="card-body text-muted">
+            Información general.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-header bg-success text-white">Success</div>
+          <div class="card-body text-muted">
+            Operación exitosa.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-header bg-danger text-white">Danger</div>
+          <div class="card-body text-muted">
+            Estado crítico.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 3. SOFT CARDS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">3. Soft Cards</h5>
+    <p class="text-muted small">
+      Fondo suave, sin bordes. Ideal para mensajes no intrusivos.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 bg-primary bg-opacity-10 h-100">
+          <div class="card-body">
+            <h6 class="text-primary">Primary Soft</h6>
+            <p class="text-muted mb-0">Estado informativo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 bg-success bg-opacity-10 h-100">
+          <div class="card-body">
+            <h6 class="text-success">Success Soft</h6>
+            <p class="text-muted mb-0">Resultado positivo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card border-0 bg-danger bg-opacity-10 h-100">
+          <div class="card-body">
+            <h6 class="text-danger">Danger Soft</h6>
+            <p class="text-muted mb-0">Advertencia ligera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 4. ICON CARDS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">4. Icon Cards</h5>
+    <p class="text-muted small">
+      Cards compactas con icono + texto.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex align-items-center gap-3">
+            <i class="bi bi-bar-chart fs-3 text-primary"></i>
+            <div>
+              <h6 class="mb-0">Statistics</h6>
+              <small class="text-muted">Monthly data</small>
             </div>
           </div>
-          <h6 class="mb-3">Colored Header</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header bg-primary text-white">Primary</div>
-                <div class="card-body">
-                  Card with colored header.
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
 
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header bg-success text-white">Success</div>
-                <div class="card-body">
-                  Success style card.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header bg-danger text-white">Danger</div>
-                <div class="card-body">
-                  Danger style card.
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6 class="mb-3">Soft Cards</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-4">
-              <div class="card border-0 bg-primary bg-opacity-10">
-                <div class="card-body">
-                  <h6 class="text-primary">Primary Soft</h6>
-                  <p class="text-muted mb-0">Soft background card.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card border-0 bg-success bg-opacity-10">
-                <div class="card-body">
-                  <h6 class="text-success">Success Soft</h6>
-                  <p class="text-muted mb-0">Clean & modern.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card border-0 bg-danger bg-opacity-10">
-                <div class="card-body">
-                  <h6 class="text-danger">Danger Soft</h6>
-                  <p class="text-muted mb-0">Perfect for alerts.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6 class="mb-3">Icon Cards</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body d-flex align-items-center">
-                  <div class="me-3 text-primary fs-3">
-                    <i class="bi bi-bar-chart"></i>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Statistics</h6>
-                    <small class="text-muted">Monthly data</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body d-flex align-items-center">
-                  <div class="me-3 text-success fs-3">
-                    <i class="bi bi-check-circle"></i>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Completed</h6>
-                    <small class="text-muted">Tasks done</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6 class="mb-3">Stats Cards</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-3">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <small class="text-muted">Users</small>
-                  <h4 class="mb-0">1,245</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <small class="text-muted">Sales</small>
-                  <h4 class="mb-0">$8,320</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <small class="text-muted">Orders</small>
-                  <h4 class="mb-0">312</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <small class="text-muted">Growth</small>
-                  <h4 class="text-success mb-0">+12%</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6 class="mb-3">Card with Actions</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <div class="card shadow-sm">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                  <span>Card Actions</span>
-                  <div>
-                    <button class="btn btn-sm btn-outline-secondary">
-                      <i class="bi bi-dash"></i>
-                    </button>
-                    <button class="btn btn-sm btn-outline-danger">
-                      <i class="bi bi-x"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  Card with header actions.
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6 class="mb-3">Dark Card</h6>
-          <div class="card bg-dark text-white mb-4">
-            <div class="card-body">
-              <h6>Dark Mode Card</h6>
-              <p class="mb-0 text-white-50">Perfect for dark dashboards.</p>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex align-items-center gap-3">
+            <i class="bi bi-check-circle fs-3 text-success"></i>
+            <div>
+              <h6 class="mb-0">Completed</h6>
+              <small class="text-muted">Tasks done</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 5. STATS CARDS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">5. Stats Cards</h5>
+
+    <div class="row g-4">
+      <div class="col-md-3" *ngFor="let stat of [1,2,3,4]">
+        <div class="card shadow-sm text-center">
+          <div class="card-body">
+            <small class="text-muted">Metric</small>
+            <h4 class="fw-bold mb-0">1,245</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 6. CARD WITH ACTIONS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">6. Card with actions</h5>
+
+    <div class="card shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Actions</span>
+        <div class="btn-group btn-group-sm">
+          <button class="btn btn-outline-secondary">
+            <i class="bi bi-dash"></i>
+          </button>
+          <button class="btn btn-outline-danger">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-body text-muted">
+        Card con acciones rápidas en el header.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 7. DARK CARD -->
+  <!-- ================================================= -->
+  <section>
+    <h5 class="fw-bold mb-3">7. Dark Card</h5>
+
+    <div class="card bg-dark text-white">
+      <div class="card-body">
+        <h6 class="fw-semibold">Dark Mode</h6>
+        <p class="text-white-50 mb-0">
+          Ideal para dashboards oscuros.
+        </p>
+      </div>
+    </div>
+  </section>
+
 </div>

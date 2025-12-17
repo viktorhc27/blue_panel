@@ -1,0 +1,156 @@
+<div class="container-fluid py-4">
+
+  <!-- ========================= -->
+  <!-- PAGE TITLE -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">BP Forms</h3>
+    <p class="text-muted mb-0">
+      Componentes de formulario reutilizables con estados y validaciones.
+    </p>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- 1. BASIC INPUTS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">1. Basic Inputs</h5>
+    <p class="text-muted small">Campos estándar de formulario.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <label class="form-label">Text</label>
+        <input type="text" class="form-control" placeholder="Enter text">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="name@email.com">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="••••••••">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 2. INPUT STATES -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">2. Input States</h5>
+    <p class="text-muted small">Estados visuales comunes.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <label class="form-label">Disabled</label>
+        <input type="text" class="form-control" disabled value="Disabled input">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Success</label>
+        <input type="text" class="form-control is-valid" value="Correct value">
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Error</label>
+        <input type="text" class="form-control is-invalid" value="Wrong value">
+        <div class="invalid-feedback">Invalid value</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 3. SELECT & TEXTAREA -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">3. Select & Textarea</h5>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <label class="form-label">Select</label>
+        <select class="form-select">
+          <option selected>Select option</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Textarea</label>
+        <textarea class="form-control" rows="3"
+          placeholder="Write something..."></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 4. CHECKBOX & RADIO -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">4. Checkbox & Radio</h5>
+
+    <div class="d-flex gap-4 flex-wrap">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1">
+        <label class="form-check-label" for="check1">
+          Checkbox
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="radio" id="radio1">
+        <label class="form-check-label" for="radio1">
+          Radio
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 5. SWITCH -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">5. Switch</h5>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="switch1">
+      <label class="form-check-label" for="switch1">
+        Enable notifications
+      </label>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 6. FORM CARD -->
+  <!-- ================================================= -->
+  <section>
+    <h5 class="fw-bold mb-3">6. Form Card</h5>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h6 class="fw-semibold mb-3">Create account</h6>
+
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input class="form-control" placeholder="username">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input class="form-control" placeholder="email@email.com">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control">
+        </div>
+
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </section>
+
+</div>

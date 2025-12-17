@@ -1,0 +1,292 @@
+<div class="container-fluid py-4">
+
+  <!-- ========================= -->
+  <!-- PAGE TITLE -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">BP Tables</h3>
+    <p class="text-muted mb-0">
+      Tablas reutilizables para listados y CRUD.
+    </p>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- 1. BASIC TABLE -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">1. Basic Table</h5>
+
+    <div class="card bp-table-card">
+      <div class="table-responsive">
+        <table class="table bp-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Juan Pérez</td>
+              <td>juan@email.com</td>
+              <td>Admin</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ana López</td>
+              <td>ana@email.com</td>
+              <td>User</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 2. TABLE WITH ACTIONS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">2. Table with Actions</h5>
+
+    <div class="card bp-table-card">
+      <div class="card-header bp-table-header">
+        <span class="fw-semibold">Users</span>
+        <button class="btn btn-primary btn-sm">Add</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table bp-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Status</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Victor Huanca</td>
+              <td><span class="badge bp-badge-success">Active</span></td>
+              <td class="text-end">
+                <button class="btn btn-soft-primary btn-sm">Edit</button>
+                <button class="btn btn-soft-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria Soto</td>
+              <td><span class="badge bp-badge-warning">Pending</span></td>
+              <td class="text-end">
+                <button class="btn btn-soft-primary btn-sm">Edit</button>
+                <button class="btn btn-soft-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 3. STRIPED / HOVER -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">3. Hover Table</h5>
+
+    <div class="card bp-table-card">
+      <div class="table-responsive">
+        <table class="table bp-table bp-table-hover">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Laptop</td>
+              <td>$1200</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Mouse</td>
+              <td>$20</td>
+              <td>150</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 4. EMPTY STATE -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">4. Empty State</h5>
+
+    <div class="card bp-table-card text-center p-5">
+      <i class="bi bi-inbox fs-1 text-muted mb-2"></i>
+      <h6 class="fw-semibold">No data available</h6>
+      <p class="text-muted small mb-0">
+        Try adding a new record.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 5. LOADING STATE -->
+  <!-- ================================================= -->
+  <section>
+    <h5 class="fw-bold mb-3">5. Loading State</h5>
+
+    <div class="card bp-table-card bp-loading-card">
+      <div class="bp-loading-content">
+        <div class="spinner-border bp-spinner"></div>
+        <p class="bp-loading-text">Loading data...</p>
+        <small class="text-muted">Please wait a moment</small>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+<div class="container-fluid py-4">
+
+  <!-- ========================= -->
+  <!-- PAGE TITLE -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">Pagination</h3>
+    <p class="text-muted mb-0">
+      Navegación de páginas para tablas y listados.
+    </p>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- BASIC PAGINATION -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">Basic Pagination</h5>
+
+    <div class="card bp-pagination-card p-3">
+      <nav>
+        <ul class="pagination bp-pagination mb-0">
+          <li class="page-item disabled">
+            <a class="page-link">‹</a>
+          </li>
+
+          <li class="page-item active">
+            <a class="page-link">1</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">2</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">3</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">›</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- PAGINATION WITH INFO -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">Pagination with Info</h5>
+
+    <div class="card bp-pagination-card p-3 d-flex
+                flex-column flex-md-row
+                justify-content-between align-items-center gap-2">
+
+      <small class="text-muted">
+        Showing <strong>1</strong> to <strong>10</strong> of <strong>125</strong>
+      </small>
+
+      <nav>
+        <ul class="pagination bp-pagination mb-0">
+          <li class="page-item disabled">
+            <a class="page-link">‹</a>
+          </li>
+
+          <li class="page-item active">
+            <a class="page-link">1</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">2</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">3</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">…</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">13</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">›</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- ICON PAGINATION -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">Icon Pagination</h5>
+
+    <div class="card bp-pagination-card p-3 text-center">
+      <nav>
+        <ul class="pagination bp-pagination justify-content-center mb-0">
+          <li class="page-item">
+            <a class="page-link">
+              <i class="bi bi-chevron-left"></i>
+            </a>
+          </li>
+
+          <li class="page-item active">
+            <a class="page-link">5</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link">
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- SIMPLE PAGINATION -->
+  <!-- ================================================= -->
+  <section>
+    <h5 class="fw-bold mb-3">Minimal Pagination</h5>
+
+    <div class="card bp-pagination-card p-3 text-end">
+      <button class="btn btn-soft-secondary btn-sm">Previous</button>
+      <button class="btn btn-soft-primary btn-sm">Next</button>
+    </div>
+  </section>
+
+</div>

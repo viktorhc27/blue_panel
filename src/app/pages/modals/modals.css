@@ -1,0 +1,228 @@
+/* ============================= */
+/* MODAL BASE                    */
+/* ============================= */
+
+.bp-modal {
+  border-radius: 16px;
+  border: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ============================= */
+/* HEADER / FOOTER               */
+/* ============================= */
+
+.bp-modal .modal-header {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.bp-modal .modal-footer {
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+
+/* ============================= */
+/* ICON MODAL                    */
+/* ============================= */
+
+.bp-modal-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.75rem;
+}
+
+.bp-modal-icon.success {
+  background: rgba(25,135,84,.12);
+  color: #198754;
+}
+
+/* ============================= */
+/* FORM                          */
+/* ============================= */
+
+.bp-form .form-control {
+  border-radius: 10px;
+  font-size: .9rem;
+}
+
+/* ============================= */
+/* ANIMATION                     */
+/* ============================= */
+
+.modal.fade .modal-dialog {
+  transform: translateY(20px);
+  transition: transform .3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+
+
+
+/* ============================= */
+/* TABS – BASE                   */
+/* ============================= */
+
+.bp-tabs {
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.bp-tabs .nav-link {
+  border: 0;
+  color: #6c757d;
+  padding: .6rem 1rem;
+  font-weight: 500;
+}
+
+.bp-tabs .nav-link.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  background: transparent;
+}
+
+/* ============================= */
+/* TABS – SOFT                   */
+/* ============================= */
+
+.bp-tabs-soft {
+  gap: .5rem;
+}
+
+.bp-tabs-soft .nav-link {
+  border-radius: 10px;
+  background: rgba(13,110,253,.08);
+  color: #0d6efd;
+  padding: .5rem 1rem;
+  border: 0;
+}
+
+.bp-tabs-soft .nav-link.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* ============================= */
+/* ACCORDION – BASE              */
+/* ============================= */
+
+.bp-accordion .accordion-item {
+  border: 0;
+  border-radius: 12px;
+  margin-bottom: .75rem;
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.05);
+}
+
+.bp-accordion .accordion-button {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.bp-accordion .accordion-button:not(.collapsed) {
+  background: rgba(13,110,253,.08);
+  color: #0d6efd;
+}
+
+/* ============================= */
+/* ACCORDION – SOFT              */
+/* ============================= */
+
+.bp-accordion-soft .accordion-item {
+  border: 0;
+  background: rgba(13,110,253,.06);
+  border-radius: 12px;
+  margin-bottom: .75rem;
+}
+
+.bp-accordion-soft .accordion-button {
+  background: transparent;
+  font-weight: 500;
+}
+
+.bp-accordion-soft .accordion-button:not(.collapsed) {
+  color: #0d6efd;
+}
+
+
+
+/* ============================= */
+/* DROPDOWN MENU                 */
+/* ============================= */
+
+.dropdown-menu {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  padding: .5rem;
+  animation: fadeDropdown .2s ease;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: .45rem .75rem;
+}
+
+.dropdown-item:hover {
+  background: rgba(13,110,253,.08);
+}
+
+/* ============================= */
+/* ICON DROPDOWN BUTTON          */
+/* ============================= */
+
+.btn-icon {
+  width: 42px;
+  height: 42px;
+}
+
+/* ============================= */
+/* TOOLTIP                       */
+/* ============================= */
+
+.tooltip-inner {
+  border-radius: 8px;
+  padding: .4rem .6rem;
+  font-size: .8rem;
+}
+
+/* ============================= */
+/* POPOVER                       */
+/* ============================= */
+
+.popover {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.popover-header {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.popover-body {
+  font-size: .85rem;
+  color: #6c757d;
+}
+
+/* ============================= */
+/* ANIMATIONS                    */
+/* ============================= */
+
+@keyframes fadeDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

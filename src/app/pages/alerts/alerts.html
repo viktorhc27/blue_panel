@@ -1,391 +1,348 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
+<div class="container-fluid py-4">
 
-            <div class="card shadow-sm border-0">
-                <div class="card-header bg-white fw-bold">
-                    <i class="bi bi-bell-fill me-2"></i> Alertas y notificaciones
-                </div>
+  <!-- ========================= -->
+  <!-- TÍTULO GENERAL -->
+  <!-- ========================= -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">BP Alerts</h3>
+    <p class="text-muted">
+      Componentes reutilizables para mostrar notificaciones, estados y mensajes del sistema.
+    </p>
+  </div>
 
-                <div class="card-body">
+  <!-- ================================================= -->
+  <!-- 1. ALERTAS BÁSICAS -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">1. Alertas básicas</h5>
+    <p class="text-muted small">
+      Uso recomendado para mostrar mensajes simples de estado.
+    </p>
 
-                    <div class="alert alert-primary d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-info-circle-fill me-2 fs-5"></i>
-                        <div>
-                            Información general del sistema cargada correctamente.
-                        </div>
-                    </div>
+    <app-bp-alerts type="primary" iconBp="info-circle-fill"
+      text="Información general del sistema">
+    </app-bp-alerts>
 
-                    <div class="alert alert-secondary d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-gear-fill me-2 fs-5"></i>
-                        <div>
-                            Configuración por defecto aplicada al módulo actual.
-                        </div>
-                    </div>
+    <app-bp-alerts type="secondary" iconBp="gear-fill"
+      text="Configuración aplicada correctamente">
+    </app-bp-alerts>
 
-                    <div class="alert alert-link d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-link-45deg me-2 fs-5"></i>
-                        <div>
-                            Accede a la documentación para más detalles técnicos.
-                        </div>
-                    </div>
+    <app-bp-alerts type="success" iconBp="check-circle-fill"
+      text="Acción realizada con éxito">
+    </app-bp-alerts>
 
-                    <div class="alert alert-success d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-check-circle-fill me-2 fs-5"></i>
-                        <div>
-                            Los cambios se guardaron exitosamente.
-                        </div>
-                    </div>
+    <app-bp-alerts type="warning" iconBp="exclamation-triangle-fill"
+      text="Advertencia: revisa los datos">
+    </app-bp-alerts>
 
-                    <div class="alert alert-warning d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
-                        <div>
-                            Hay campos incompletos que requieren atención.
-                        </div>
-                    </div>
+    <app-bp-alerts type="danger" iconBp="x-circle-fill"
+      text="Error al procesar la solicitud">
+    </app-bp-alerts>
 
-                    <div class="alert alert-danger d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-x-circle-fill me-2 fs-5"></i>
-                        <div>
-                            Error al procesar la solicitud. Intenta nuevamente.
-                        </div>
-                    </div>
+    <app-bp-alerts type="dark" iconBp="shield-exclamation"
+      text="Acceso restringido">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="alert alert-dark d-flex align-items-center shadow-sm rounded" role="alert">
-                        <i class="bi bi-shield-lock-fill me-2 fs-5"></i>
-                        <div>
-                            Acceso restringido para usuarios sin permisos.
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="alert alert-primary shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-info-circle-fill me-2"></i> Información
-                        </h5>
-                        <p class="mb-0">Este módulo muestra datos generales del panel.</p>
-                    </div>
+  <!-- ================================================= -->
+  <!-- 2. ALERTAS CON TÍTULO -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">2. Alertas con título</h5>
+    <p class="text-muted small">
+      Ideales para mensajes importantes o secciones informativas.
+    </p>
 
-                    <div class="alert alert-secondary shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-sliders me-2"></i> Configuración
-                        </h5>
-                        <p class="mb-0">Las opciones fueron restablecidas a valores estándar.</p>
-                    </div>
+    <app-bp-alerts
+      type="info"
+      title="Información"
+      iconBp="info-circle-fill"
+      text="Este módulo muestra datos relevantes del sistema">
+    </app-bp-alerts>
 
-                    <div class="alert alert-light shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-eye-fill me-2"></i> Vista previa
-                        </h5>
-                        <p class="mb-0">Estás viendo una versión de solo lectura.</p>
-                    </div>
+    <app-bp-alerts
+      type="warning"
+      title="Advertencia"
+      iconBp="exclamation-triangle-fill"
+      text="Revisa los campos antes de continuar">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="alert alert-success shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-check-circle-fill me-2"></i> Operación exitosa
-                        </h5>
-                        <p class="mb-0">La acción se completó sin errores.</p>
-                    </div>
+  <!-- ================================================= -->
+  <!-- 3. ALERTAS CERRABLES -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">3. Alertas cerrables</h5>
+    <p class="text-muted small">
+      El usuario puede cerrar manualmente la alerta.
+    </p>
 
-                    <div class="alert alert-warning shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-exclamation-triangle-fill me-2"></i> Advertencia
-                        </h5>
-                        <p class="mb-0">Revisa los datos antes de continuar.</p>
-                    </div>
+    <app-bp-alerts
+      type="success"
+      iconBp="check-circle-fill"
+      text="Los datos se guardaron correctamente"
+      [dismissible]="true">
+    </app-bp-alerts>
 
-                    <div class="alert alert-danger shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-x-octagon-fill me-2"></i> Error
-                        </h5>
-                        <p class="mb-0">No fue posible completar la operación.</p>
-                    </div>
+    <app-bp-alerts
+      type="danger"
+      iconBp="x-circle-fill"
+      text="No se pudo completar la operación"
+      [dismissible]="true">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="alert alert-dark shadow-sm rounded">
-                        <h5 class="alert-heading d-flex align-items-center">
-                            <i class="bi bi-shield-exclamation me-2"></i> Seguridad
-                        </h5>
-                        <p class="mb-0">Se detectó un acceso no autorizado.</p>
-                    </div>
-                    <hr>
-                    <div class="alert alert-primary alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        Información actualizada correctamente.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <div class="alert alert-warning alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        Atención: revisa los campos obligatorios.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <div class="alert alert-danger alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-x-circle-fill me-2"></i>
-                        No se pudo enviar el formulario.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <div class="alert alert-success alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        Los datos se guardaron correctamente.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
+  <!-- ================================================= -->
+  <!-- 4. ALERTAS PEQUEÑAS (STATUS) -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">4. Alertas pequeñas (status)</h5>
+    <p class="text-muted small">
+      Pensadas para dashboards, encabezados o estados rápidos.
+    </p>
 
-                    <div class="alert alert-info alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        Información actualizada correctamente.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
+    <app-bp-alerts
+      type="secondary"
+      iconBp="clock-history"
+      text="Última actualización: hace 5 minutos"
+      [small]="true">
+    </app-bp-alerts>
 
-                    <div class="alert alert-link alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        Información actualizada correctamente.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <div class="alert alert-dark alert-dismissible fade show shadow-sm rounded" role="alert">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        Información actualizada correctamente.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <hr>
-                    <div class="p-3 rounded border-start border-4 border-info mb-3" style="background:#0dcaf020;">
-                        <h6 class="fw-bold text-info mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-success mb-3" style="background:#0df06420;">
-                        <h6 class="fw-bold text-success mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-danger mb-3" style="background:#f0150d20;">
-                        <h6 class="fw-bold text-danger mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-primary mb-3" style="background:#0d37f020;">
-                        <h6 class="fw-bold text-primary mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-warning mb-3" style="background:#e4e71120;">
-                        <h6 class="fw-bold text-warning mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-light mb-3" style="background:#99989820;">
-                        <h6 class="fw-bold text-dark mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <div class="p-3 rounded border-start border-4 border-dark mb-3" style="background:#3d3c3c20;">
-                        <h6 class="fw-bold text-dark mb-1">
-                            <i class="bi bi-info-circle me-1"></i> Información
-                        </h6>
-                        <small class="text-muted">
-                            Esta sección muestra datos importantes del sistema.
-                        </small>
-                    </div>
-                    <hr>
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-check-circle-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Sistema estable</h6>
-                                <small class="text-muted">Funcionando correctamente</small>
-                            </div>
-                        </div>
-                    </div>
+    <app-bp-alerts
+      type="primary"
+      iconBp="arrow-repeat"
+      text="Sincronizando datos…"
+      [small]="true">
+    </app-bp-alerts>
 
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-exclamation-triangle-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Advertencia</h6>
-                                <small class="text-muted">Revisa el consumo</small>
-                            </div>
-                        </div>
-                    </div>
+    <app-bp-alerts
+      type="success"
+      iconBp="check-circle-fill"
+      text="Proceso completado"
+      [small]="true">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-info-circle-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Información</h6>
-                                <small class="text-muted">Evento registrado</small>
-                            </div>
-                        </div>
-                    </div>
+  <!-- ================================================= -->
+  <!-- 5. ALERTAS CON ACCIÓN -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">5. Alertas con acción</h5>
+    <p class="text-muted small">
+      Incluyen un botón para acciones rápidas.
+    </p>
 
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-x-circle-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Error crítico</h6>
-                                <small class="text-muted">No se pudo conectar al servidor.</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-gear-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Configuración aplicada</h6>
-                                <small class="text-muted">Parámetros por defecto activos</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-shield-lock-fill"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Acceso restringido</h6>
-                                <small class="text-muted">Permisos insuficientes</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-light border d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-eye-fill text-dark"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Modo lectura</h6>
-                                <small class="text-muted">No se permiten modificaciones</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-0 shadow-sm mb-3">
-                        <div class="card-body d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                                style="width:40px;height:40px;">
-                                <i class="bi bi-arrow-repeat"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Procesando</h6>
-                                <small class="text-muted">Ejecutando tarea en segundo plano</small>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="alert alert-secondary py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-clock-history me-2"></i>
-                        <span>Última actualización: hace 5 minutos</span>
-                    </div>
+    <app-bp-alerts
+      type="info"
+      iconBp="bell-fill"
+      text="Tienes notificaciones pendientes"
+      actionText="Ver">
+    </app-bp-alerts>
 
-                    <div class="alert alert-warning py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        <span>Actualización pendiente</span>
-                    </div>
+    <app-bp-alerts
+      type="warning"
+      iconBp="exclamation-triangle-fill"
+      text="Notificaciones importantes pendientes"
+      actionText="Revisar">
+    </app-bp-alerts>
 
-                    <div class="alert alert-primary py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-arrow-repeat me-2"></i>
-                        <span>Sincronizando datos…</span>
-                    </div>
+    <app-bp-alerts
+      type="danger"
+      iconBp="x-circle-fill"
+      text="Error al cargar notificaciones"
+      actionText="Reintentar">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="alert alert-info py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        <span>Información actualizada correctamente</span>
-                    </div>
+    <!-- ================================================= -->
+  <!-- 6. ALERTAS CON BORDE LATERAL -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">6. Alertas con borde lateral</h5>
+    <p class="text-muted small">
+      Se utilizan para destacar información importante o persistente.
+    </p>
 
-                    <div class="alert alert-light py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-eye-fill me-2 text-dark"></i>
-                        <span class="text-dark">Vista previa activa</span>
-                    </div>
+    <app-bp-alerts
+      type="info"
+      title="Información"
+      iconBp="info-circle-fill"
+      text="Esta sección muestra datos importantes del sistema"
+      [border]="true">
+    </app-bp-alerts>
 
-                    <div class="alert alert-dark py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-shield-lock-fill me-2"></i>
-                        <span>Acceso restringido</span>
-                    </div>
+    <app-bp-alerts
+      type="success"
+      title="Correcto"
+      iconBp="check-circle-fill"
+      text="El proceso finalizó sin errores"
+      [border]="true">
+    </app-bp-alerts>
 
-                    <div class="alert alert-danger py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-x-circle-fill me-2"></i>
-                        <span>Error en la última actualización</span>
-                    </div>
+    <app-bp-alerts
+      type="danger"
+      title="Error"
+      iconBp="x-circle-fill"
+      text="No fue posible conectar con el servidor"
+      [border]="true">
+    </app-bp-alerts>
+  </section>
 
-                    <div class="alert alert-success py-2 px-3 small d-flex align-items-center shadow-sm rounded">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        <span>Actualización completada correctamente</span>
-                    </div>
-                    <hr>
+  <!-- ================================================= -->
+  <!-- 7. ALERTAS CARD (ESTADOS) -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">7. Cards de estado</h5>
+    <p class="text-muted small">
+      Componentes visuales para mostrar estados del sistema en dashboards.
+    </p>
 
+    <app-bp-alerts-card
+      title="Sistema estable"
+      subtitle="Funcionando correctamente"
+      icon="check-circle-fill"
+      type="success">
+    </app-bp-alerts-card>
 
-                    <div class="alert alert-info d-flex justify-content-between align-items-center shadow-sm rounded">
-                        <div>
-                            <i class="bi bi-bell-fill me-2"></i>
-                            Tienes notificaciones pendientes
-                        </div>
-                        <button class="btn btn-sm btn-outline-info">Ver</button>
-                    </div>
-                    <div
-                        class="alert alert-success d-flex justify-content-between align-items-center shadow-sm rounded">
-                        <div>
-                            <i class="bi bi-check-circle-fill me-2"></i>
-                            Todas las notificaciones fueron revisadas
-                        </div>
-                        <button class="btn btn-sm btn-outline-success">Ver</button>
-                    </div>
-                    <div
-                        class="alert alert-warning d-flex justify-content-between align-items-center shadow-sm rounded">
-                        <div>
-                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                            Notificaciones importantes pendientes
-                        </div>
-                        <button class="btn btn-sm btn-outline-warning">Revisar</button>
-                    </div>
-                    <div class="alert alert-danger d-flex justify-content-between align-items-center shadow-sm rounded">
-                        <div>
-                            <i class="bi bi-x-circle-fill me-2"></i>
-                            Error al cargar notificaciones
-                        </div>
-                        <button class="btn btn-sm btn-outline-danger">Reintentar</button>
-                    </div>
-                    <div class="alert alert-dark d-flex justify-content-between align-items-center shadow-sm rounded">
-                        <div>
-                            <i class="bi bi-shield-lock-fill me-2"></i>
-                            Notificaciones restringidas
-                        </div>
-                        <button class="btn btn-sm btn-outline-light">Ver</button>
-                    </div>
+    <app-bp-alerts-card
+      title="Advertencia"
+      subtitle="Revisa el consumo"
+      icon="exclamation-triangle-fill"
+      type="warning">
+    </app-bp-alerts-card>
 
+    <app-bp-alerts-card
+      title="Información"
+      subtitle="Evento registrado"
+      icon="info-circle-fill"
+      type="info">
+    </app-bp-alerts-card>
 
-                </div>
-            </div>
+    <app-bp-alerts-card
+      title="Error crítico"
+      subtitle="No se pudo conectar al servidor"
+      icon="x-circle-fill"
+      type="danger">
+    </app-bp-alerts-card>
 
-        </div>
-    </div>
+    <app-bp-alerts-card
+      title="Configuración aplicada"
+      subtitle="Parámetros por defecto activos"
+      icon="gear-fill"
+      type="secondary">
+    </app-bp-alerts-card>
+
+    <app-bp-alerts-card
+      title="Acceso restringido"
+      subtitle="Permisos insuficientes"
+      icon="shield-lock-fill"
+      type="dark">
+    </app-bp-alerts-card>
+
+    <app-bp-alerts-card
+      title="Modo lectura"
+      subtitle="No se permiten modificaciones"
+      icon="eye-fill"
+      type="light">
+    </app-bp-alerts-card>
+
+    <app-bp-alerts-card
+      title="Procesando"
+      subtitle="Ejecutando tarea en segundo plano"
+      icon="arrow-repeat"
+      type="primary">
+    </app-bp-alerts-card>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 8. ALERTAS INLINE (MINIMAL) -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">8. Alertas inline (minimal)</h5>
+    <p class="text-muted small">
+      Para estados compactos dentro de tablas o listas.
+    </p>
+
+    <app-bp-alerts type="secondary" iconBp="clock-history"
+      text="Última actualización: hace 5 minutos" [small]="true">
+    </app-bp-alerts>
+
+    <app-bp-alerts type="warning" iconBp="exclamation-triangle-fill"
+      text="Actualización pendiente" [small]="true">
+    </app-bp-alerts>
+
+    <app-bp-alerts type="primary" iconBp="arrow-repeat"
+      text="Sincronizando datos…" [small]="true">
+    </app-bp-alerts>
+
+    <app-bp-alerts type="success" iconBp="check-circle-fill"
+      text="Actualización completada" [small]="true">
+    </app-bp-alerts>
+
+    <app-bp-alerts type="danger" iconBp="x-circle-fill"
+      text="Error en la actualización" [small]="true">
+    </app-bp-alerts>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 9. ALERTAS CON ACCIÓN + INLINE -->
+  <!-- ================================================= -->
+  <section class="mb-5">
+    <h5 class="fw-bold mb-3">9. Alertas con acción (inline)</h5>
+    <p class="text-muted small">
+      Combinan estado + acción directa.
+    </p>
+
+    <app-bp-alerts
+      type="info"
+      iconBp="bell-fill"
+      text="Tienes notificaciones pendientes"
+      actionText="Ver">
+    </app-bp-alerts>
+
+    <app-bp-alerts
+      type="success"
+      iconBp="check-circle-fill"
+      text="Todas las notificaciones fueron revisadas"
+      actionText="Ver">
+    </app-bp-alerts>
+
+    <app-bp-alerts
+      type="warning"
+      iconBp="exclamation-triangle-fill"
+      text="Notificaciones importantes"
+      actionText="Revisar">
+    </app-bp-alerts>
+
+    <app-bp-alerts
+      type="danger"
+      iconBp="x-circle-fill"
+      text="Error al cargar notificaciones"
+      actionText="Reintentar">
+    </app-bp-alerts>
+
+    <app-bp-alerts
+      type="dark"
+      iconBp="shield-lock-fill"
+      text="Notificaciones restringidas"
+      actionText="Ver">
+    </app-bp-alerts>
+  </section>
+
+  <!-- ================================================= -->
+  <!-- 10. RESUMEN DE USO -->
+  <!-- ================================================= -->
+  <section class="border-top pt-4 mt-5">
+    <h5 class="fw-bold mb-3">Guía rápida</h5>
+
+    <ul class="small text-muted">
+      <li><strong>Alertas básicas:</strong> mensajes simples</li>
+      <li><strong>Con título:</strong> mensajes importantes</li>
+      <li><strong>Cerrables:</strong> feedback temporal</li>
+      <li><strong>Small:</strong> dashboards</li>
+      <li><strong>Card:</strong> estados del sistema</li>
+      <li><strong>Acción:</strong> interacción rápida</li>
+    </ul>
+  </section>
+
 </div>

@@ -1,62 +1,95 @@
 <div class="sidebar d-flex flex-column p-3" [class.collapsed]="sidebarCollapsed">
-  <h4 class="text-white mb-4"></h4>
 
   @if (!sidebarCollapsed) {
-  <!-- Sidebar normal -->
+  <!-- ================= SIDEBAR NORMAL ================= -->
   <ul class="nav nav-pills flex-column">
 
-    <!-- ITEM NORMAL -->
     <li class="nav-item mb-2">
-      <a routerLink="/dashboard" class="nav-link text-white sidebar-item">
-        <i class="bi bi-bar-chart"></i> Dashboard
-      </a>
-    </li>
-    <li class="nav-item mb-2">
-      <a routerLink="/buttons" class="nav-link text-white sidebar-item">
-        <i class="bi bi-bar-chart"></i> Buttons
-      </a>
-    </li>
-    <!-- ITEM NORMAL -->
-    <li class="nav-item mb-2">
-      <a routerLink="/alerts" class="nav-link text-white sidebar-item">
-        <i class="bi bi-file-earmark-text"></i> Alerts
-      </a>
-    </li>
-    <!-- ITEM NORMAL -->
-    <li class="nav-item mb-2">
-      <a routerLink="/headers" class="nav-link text-white sidebar-item">
-        <i class="bi bi-file-earmark-text"></i> Headers
-      </a>
-    </li>
-    <li class="nav-item mb-2">
-      <a routerLink="/cards" class="nav-link text-white sidebar-item">
-        <i class="bi bi-file-earmark-text"></i> Cards
-      </a>
-    </li>
-    <li class="nav-item mb-2">
-      <a routerLink="/reportes" class="nav-link text-white sidebar-item">
-        <i class="bi bi-file-earmark-text"></i> Reportes
+      <a routerLink="/dashboard" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-speedometer2"></i> Dashboard
       </a>
     </li>
 
-    <!-- GRUPO CON SUBMENÚ -->
     <li class="nav-item mb-2">
-      <div class="nav-link text-white sidebar-item d-flex justify-content-between" (click)="grupoOpen = !grupoOpen">
+      <a routerLink="/buttons" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-ui-checks"></i> Buttons
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/alerts" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-exclamation-triangle"></i> Alerts
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/form" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-input-cursor-text"></i> Forms
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/charts" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-graph-up"></i> Charts
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/login" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-box-arrow-in-right"></i> Login
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/tables" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-table"></i> Tables
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/modals" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-window"></i> Modals
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/headers" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-layout-text-window-reverse"></i> Headers
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/cards" class="nav-link text-white sidebar-item" routerLinkActive="active">
+        <i class="bi bi-card-list"></i> Cards
+      </a>
+    </li>
+
+    <!-- ADMINISTRACIÓN -->
+    <li class="nav-item mb-2">
+      <div class="nav-link text-white sidebar-item d-flex justify-content-between"
+           (click)="grupoOpen = !grupoOpen">
         <div>
-          <i class="bi bi-folder"></i> Administración
+          <i class="bi bi-folder2-open"></i> Administración
         </div>
         <i class="bi" [ngClass]="grupoOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
       </div>
 
       @if (grupoOpen) {
       <ul class="submenu">
-        <li><a routerLink="/roles" class="submenu-item"> <i class="bi bi-people"></i> Roles</a></li>
-        <li><a routerLink="/permisos" class="submenu-item"><i class="bi bi-shield-lock"></i> Permisos</a></li>
+        <li>
+          <a routerLink="/roles" class="submenu-item">
+            <i class="bi bi-person-badge"></i> Roles
+          </a>
+        </li>
+        <li>
+          <a routerLink="/permisos" class="submenu-item">
+            <i class="bi bi-shield-lock"></i> Permisos
+          </a>
+        </li>
       </ul>
       }
     </li>
 
-    <!-- ITEM NORMAL -->
     <li class="nav-item mb-2">
       <a routerLink="/usuarios" class="nav-link text-white sidebar-item">
         <i class="bi bi-people"></i> Usuarios
@@ -65,49 +98,101 @@
 
     <li class="nav-item">
       <a routerLink="/configuracion" class="nav-link text-white sidebar-item">
-        <i class="bi bi-gear"></i> Configuración
+        <i class="bi bi-gear-fill"></i> Configuración
       </a>
     </li>
+
   </ul>
 
   } @else {
-  <!-- SIDEBAR COLAPSADO -->
+  <!-- ================= SIDEBAR COLAPSADO ================= -->
   <ul class="nav nav-pills flex-column">
 
     <li class="nav-item mb-2">
-      <a routerLink="/dashboard" class="collapsed-btn" data-bs-toggle="tooltip" title="Texto del tooltip">
-        <i class="bi bi-bar-chart"></i>
+      <a routerLink="/dashboard" class="collapsed-btn" title="Dashboard" routerLinkActive="active">
+        <i class="bi bi-speedometer2"></i>
       </a>
     </li>
 
     <li class="nav-item mb-2">
-      <a routerLink="/reportes" class="collapsed-btn">
-        <i class="bi bi-file-earmark-text"></i>
+      <a routerLink="/buttons" class="collapsed-btn" title="Buttons" routerLinkActive="active">
+        <i class="bi bi-ui-checks"></i>
       </a>
     </li>
 
-    <!-- GRUPO CUANDO ESTÁ COLAPSADO -->
+    <li class="nav-item mb-2">
+      <a routerLink="/alerts" class="collapsed-btn" title="Alerts" routerLinkActive="active">
+        <i class="bi bi-exclamation-triangle"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/form" class="collapsed-btn" title="Forms" routerLinkActive="active">
+        <i class="bi bi-input-cursor-text"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/charts" class="collapsed-btn" title="Charts" routerLinkActive="active">
+        <i class="bi bi-graph-up"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/login" class="collapsed-btn" title="Login" routerLinkActive="active">
+        <i class="bi bi-box-arrow-in-right"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/tables" class="collapsed-btn" title="Tables" routerLinkActive="active">
+        <i class="bi bi-table"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/modals" class="collapsed-btn" title="Modals" routerLinkActive="active">
+        <i class="bi bi-window"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/headers" class="collapsed-btn" title="Headers" routerLinkActive="active">
+        <i class="bi bi-layout-text-window-reverse"></i>
+      </a>
+    </li>
+
+    <li class="nav-item mb-2">
+      <a routerLink="/cards" class="collapsed-btn" title="Cards" routerLinkActive="active">
+        <i class="bi bi-card-list"></i>
+      </a>
+    </li>
+
+    <!-- ADMIN -->
     <li class="nav-item mb-2 tooltip-menu">
       <a class="collapsed-btn">
-        <i class="bi bi-folder"></i>
+        <i class="bi bi-folder2-open"></i>
       </a>
 
       <div class="tooltip-panel">
-        <a routerLink="/roles" class="tooltip-item"><i class="bi bi-people"></i> Roles</a>
-        <a routerLink="/permisos" class="tooltip-item"><i class="bi bi-shield-lock"></i> Permisos</a>
+        <a routerLink="/roles" class="tooltip-item">
+          <i class="bi bi-person-badge"></i> Roles
+        </a>
+        <a routerLink="/permisos" class="tooltip-item">
+          <i class="bi bi-shield-lock"></i> Permisos
+        </a>
       </div>
     </li>
 
-
     <li class="nav-item mb-2">
-      <a routerLink="/usuarios" class="collapsed-btn">
+      <a routerLink="/usuarios" class="collapsed-btn" title="Usuarios">
         <i class="bi bi-people"></i>
       </a>
     </li>
 
     <li class="nav-item">
-      <a routerLink="/configuracion" class="collapsed-btn">
-        <i class="bi bi-gear"></i>
+      <a routerLink="/configuracion" class="collapsed-btn" title="Configuración">
+        <i class="bi bi-gear-fill"></i>
       </a>
     </li>
 
